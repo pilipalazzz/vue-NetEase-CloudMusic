@@ -1,0 +1,125 @@
+.my{
+  width: 100%;
+  height: calc(100% - 50px);
+  position: absolute;
+  background-color: #f5f5f5;
+  .toggle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  .navBar{
+    height: 80px;
+    padding: 10px;
+    text-align: center;
+    .title{
+      font-size: 18px;
+    }
+    .name{
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .icon{
+        position: absolute;
+    }
+  }
+  .imgBox{
+    width: 280px;
+    height: 280px;
+    margin:  20px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(29, 29, 29,0.1);
+    .img{
+      width: 260px;
+      height: 260px;
+      background-color: skyblue;
+      border-radius: 50%;
+      overflow: hidden;
+      animation: r 15s linear 0s infinite normal running;
+    }
+  }
+  .bar{
+    height: 5px;
+    width: 230px;
+    margin: 120px auto 0;
+    position: relative;
+    .currentTime,.time{
+      position: absolute;
+      top: -4px;
+    }
+    .currentTime{
+      left: -35px;
+    }
+    .time{
+      right: -35px;
+    }
+  }
+  .progressBar{
+    height: 5px;
+    width: 230px;
+    margin: 120px auto 0;
+    background-color: #5a5a5a;
+    .progress{
+      height: 100%;
+      width: 0%;
+      background-color: pink;
+    }
+  }
+  .contorl{
+    display: flex;
+    padding: 0 20px;
+    margin-top: 20px;
+    &>div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      height: 50px;
+    }
+    .last{
+      .lastBtn{
+        display: block;
+        width: 45px;
+        height: 45px;
+        
+      }
+    }
+    .next{
+      .rightBtn{
+        display: block;
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  .list-content{
+    height: 300px;
+    overflow-y: scroll;
+    .ss{
+      min-height: 300px;
+      padding: 10px 20px 20px;
+      .playList{
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+@keyframes r {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
